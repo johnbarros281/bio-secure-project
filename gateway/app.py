@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # CONFIGURATION
-PATIENT_IP = os.getenv("PATIENT_IP", "192.168.X.XX")
+PATIENT_IP = os.getenv("PATIENT_IP", "192.XXX.X.XX")
 SENSOR_URL = f"http://{PATIENT_IP}:5000/vitals"
 SECRET_KEY = "AdminSecure123"  # The Password
 
