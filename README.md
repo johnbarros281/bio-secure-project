@@ -62,7 +62,7 @@ The user provides the correct key. Result: Cleartext JSON data. ![Authorized Vie
 
 3. Forensic Logs
 
-Docker logs showing the detection of both authorized and unauthorized attempts. ![Logs](screenshots/logs.png)
+Docker logs showing the detection of both authorized and unauthorized attempts. ![Logs](logs.png)
 🛠️ Technologies Used
 
     Hardware: Raspberry Pi 3B, Raspberry Pi Zero W
