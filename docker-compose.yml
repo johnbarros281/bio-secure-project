@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  # SERVICE 1: Secure Gateway (The Bouncer)
+  secure-gateway:
+    build: ./gateway
+    container_name: secure_gateway
+    ports:
+      - "8000:8000"  # Exposes the Bouncer on Port 8000
+    environment:
+      - PATIENT_IP=192.168.X.XX
+    restart: unless-stopped
