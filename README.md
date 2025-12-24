@@ -58,7 +58,7 @@ The user tries to access the Gateway without a key. Result: Access Denied & Encr
 
 2. Authorized Access (The "Doctor" View)
 
-The user provides the correct key. Result: Cleartext JSON data. ![Authorized View](decrypted project.png)
+The user provides the correct key. Result: Cleartext JSON data. ![Authorized View](bio-secureproject/decrypted_project.png)
 3. Forensic Logs
 
 Docker logs showing the detection of both authorized and unauthorized attempts. ![Logs](screenshots/logs.png)
