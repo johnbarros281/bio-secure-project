@@ -81,13 +81,13 @@ Docker logs showing the detection of both authorized and unauthorized attempts. 
 ## 🚀 How to Run
 
 1. The Sensor (Pi Zero W)
-Bash
 
-### Start the vulnerable service
+```bash
 python3 vitals.py
+```
 
 2. The Gateway (Pi 3)
-Bash
-
-### Build and run the secure container
+```bash
+# Build and run the secure container
 docker compose up -d --build
+```
