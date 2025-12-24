@@ -1,25 +1,24 @@
 # bio-secure-project
 A quick and simple Raspberry Pi project simulating a medical device sending out sensitive information and connecting to it securely
 
-🛡️ Bio-Secure IoT Lab: Securing Vulnerable Medical Infrastructure
+# 🛡️ Bio-Secure IoT Lab: Securing Vulnerable Medical Infrastructure
 Project Overview
 
 This project simulates a real-world cybersecurity challenge: securing legacy medical IoT devices that transmit sensitive patient data over unencrypted channels.
 
 Using heterogeneous hardware (Raspberry Pi 3 & Pi Zero W), I built a segmented network architecture where a Secure Gateway acts as a reverse proxy, enforcing authentication, encryption, and audit logging before allowing access to a vulnerable "Medical Sensor."
-🎯 Objective
+## 🎯 Objective
 
 To demonstrate Network Defense, API Security, and Containerized Infrastructure by moving from a flat, insecure network to a hardened, segmented architecture.
-🏗️ Network Architecture
-Shutterstock
+## 🏗️ Network Architecture
 
-    Node A (The Gateway): Raspberry Pi 3 Model B (Running Docker + Flask + Pi-hole). Acts as the "Bouncer."
+Node A (The Gateway): Raspberry Pi 3 Model B (Running Docker + Flask + Pi-hole). Acts as the "Bouncer."
 
-    Node B (The Vulnerable Sensor): Raspberry Pi Zero W. Simulates an insecure insulin pump broadcasting raw JSON data.
+Node B (The Vulnerable Sensor): Raspberry Pi Zero W. Simulates an insecure insulin pump broadcasting raw JSON data.
 
-    The Firewall: UFW rules on Node B strictly block all traffic except requests originating from Node A.
+The Firewall: UFW rules on Node B strictly block all traffic except requests originating from Node A.
 
-🔒 Key Security Features
+## 🔒 Key Security Features
 1. Identity & Access Management (IAM)
 
     Problem: The medical sensor (Node B) had no authentication; anyone on the WiFi could view patient vitals.
@@ -33,13 +32,12 @@ Shutterstock
     Logic: If an unauthorized user attempts to view the dashboard, the system does not just block them; it simulates Encrypted Obfuscation.
 
     Code Highlight:
-    Python
-
+```python
     if provided_key != SECRET_KEY:
         # User sees base64 encoded gibberish instead of medical data
         encrypted_blob = base64.b64encode(raw_data.encode()).decode()
         return jsonify({"error": "Access Denied", "payload": encrypted_blob})
-
+```
 3. Network Segmentation & Firewalls
 
     Defense: configured UFW (Uncomplicated Firewall) on the Pi Zero to create a "Allowlist" policy.
@@ -52,7 +50,7 @@ Shutterstock
 
     Every access attempt is logged with the timestamp, source IP, and access status (Authorized/Unauthorized). This provides a forensic trail for incident response.
 
-📸 Proof of Concept (Screenshots)
+## 📸 Proof of Concept (Screenshots)
 1. The Attack Surface (Before Security)
 
 (Insert screenshot of direct access to Pi Zero failing/working depending on stage)
@@ -79,7 +77,7 @@ Docker logs showing the detection of both authorized and unauthorized attempts. 
 
     Protocol: HTTP/JSON
 
-🚀 How to Run
+## 🚀 How to Run
 
 1. The Sensor (Pi Zero W)
 Bash
