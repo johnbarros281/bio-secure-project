@@ -54,11 +54,12 @@ The Firewall: UFW rules on Node B strictly block all traffic except requests ori
 ## 📸 Proof of Concept (Screenshots)
 1. Unauthorized Access Attempt (The "Hacker" View)
 
-The user tries to access the Gateway without a key. Result: Access Denied & Encrypted Payload. ![Unauthorized View]()
+The user tries to access the Gateway without a key. Result: Access Denied & Encrypted Payload. ![Unauthorized View](encrypted_project.png)
 
 2. Authorized Access (The "Doctor" View)
 
-The user provides the correct key. Result: Cleartext JSON data. ![Authorized View]([bio-secureproject/decrypted_project.png)](https://github.com/johnbarros281/bio-secure-project/blob/e26e21e23f075bfdb0b77582284989a9234a8c23/decrypted%20project.png)
+The user provides the correct key. Result: Cleartext JSON data. ![Authorized View](decrypted_project.png)
+
 3. Forensic Logs
 
 Docker logs showing the detection of both authorized and unauthorized attempts. ![Logs](screenshots/logs.png)
