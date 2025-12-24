@@ -52,16 +52,14 @@ The Firewall: UFW rules on Node B strictly block all traffic except requests ori
     Every access attempt is logged with the timestamp, source IP, and access status (Authorized/Unauthorized). This provides a forensic trail for incident response.
 
 ## 📸 Proof of Concept (Screenshots)
-1. The Attack Surface (Before Security)
+1. Unauthorized Access Attempt (The "Hacker" View)
 
-(Insert screenshot of direct access to Pi Zero failing/working depending on stage)
-2. Unauthorized Access Attempt (The "Hacker" View)
+The user tries to access the Gateway without a key. Result: Access Denied & Encrypted Payload. ![Unauthorized View]()
 
-The user tries to access the Gateway without a key. Result: Access Denied & Encrypted Payload. ![Unauthorized View](screenshots/unauthorized.png)
-3. Authorized Access (The "Doctor" View)
+2. Authorized Access (The "Doctor" View)
 
 The user provides the correct key. Result: Cleartext JSON data. ![Authorized View](screenshots/authorized.png)
-4. Forensic Logs
+3. Forensic Logs
 
 Docker logs showing the detection of both authorized and unauthorized attempts. ![Logs](screenshots/logs.png)
 🛠️ Technologies Used
