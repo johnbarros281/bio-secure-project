@@ -42,7 +42,7 @@ The Firewall: UFW rules on Node B strictly block all traffic except requests ori
 
     Defense: configured UFW (Uncomplicated Firewall) on the Pi Zero to create a "Allowlist" policy.
 
-    Rule: ALLOW FROM 192.168.1.50 TO ANY PORT 5000
+    Rule: ALLOW FROM 192.XXX.X.XX TO ANY PORT 5000
 
     Effect: Direct access attacks (bypassing the gateway) are dropped instantly.
 
