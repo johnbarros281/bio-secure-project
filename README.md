@@ -2,7 +2,8 @@
 A quick and simple Raspberry Pi project simulating a medical device sending out sensitive information and connecting to it securely
 
 # 🛡️ Bio-Secure IoT Lab: Securing Vulnerable Medical Infrastructure
-Project Overview
+
+## Project Overview
 
 This project simulates a real-world cybersecurity challenge: securing legacy medical IoT devices that transmit sensitive patient data over unencrypted channels.
 
